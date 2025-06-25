@@ -484,7 +484,7 @@ bold {
 
 @media only screen and (max-width:600px) {
     .container {
-        grid-template-columns: [first] auto [line2] auto [line3] auto [line4] auto [line5] auto [line6] auto [end];
+        grid-template-columns: [first] auto [line2] 1fr [line3] 1fr [line4] 1fr [line5] 1fr [line6] auto [end];
         grid-template-rows: [menu-start] auto [menu-end header-start] auto [header-end border-start] auto [border-end row1-start] auto [row1-end] auto [tabletrow1] auto [phonerow1] auto [phonerow2] auto [tabletrow2] auto [row2-start] auto [row2-end] auto [row3-start] auto [row4-start] auto [row5-start] auto [row6-start] auto [phonerow3] auto [phonerow4] auto [phonerow5] auto [row7-start] auto [row8-start] auto [row9-start] auto [row10-start] auto [footer-start] auto [footer-end];
     }
 
@@ -542,6 +542,7 @@ bold {
     }
 
     .the-premise-image {
+        height: 200px;
         margin: 0;
     }
 
@@ -551,6 +552,7 @@ bold {
     }
 
     .the-monster-image {
+        height: 200px;
         margin: 0;
     }
 
