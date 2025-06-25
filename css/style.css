@@ -488,6 +488,11 @@ bold {
         grid-template-rows: [menu-start] auto [menu-end header-start] auto [header-end border-start] auto [border-end row1-start] auto [row1-end] auto [tabletrow1] auto [phonerow1] auto [phonerow2] auto [tabletrow2] auto [row2-start] auto [row2-end] auto [row3-start] auto [row4-start] auto [row5-start] auto [row6-start] auto [phonerow3] auto [phonerow4] auto [phonerow5] auto [row7-start] auto [row8-start] auto [row9-start] auto [row10-start] auto [footer-start] auto [footer-end];
     }
 
+    .menu > .time {
+        text-align: center;
+        font-size: .5rem;
+    }
+
     .image {
         display: block;
     }
@@ -587,7 +592,7 @@ bold {
     }
 
     a::before {
-    display: none;
-}
+        display: none;
+    }
 
 }
