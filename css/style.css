@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
+html {
+    font-size: 16px; 
+}
+
+.container {
+    display: grid;
+    grid-template-columns: [first] 1fr [line2] 240px [line3] 240px [line4] 240px [line5] 240px [line6] 1fr [end];
+    grid-template-rows: [menu-start] auto [menu-end header-start] auto [header-end border-start] auto [border-end row1-start] auto [row1-end] auto [row2-start] auto [row2-end] auto [row3-start] auto [row4-start] auto [row5-start] auto [row6-start] auto [row7-start] auto [row8-start] auto [row9-start] auto [row10-start footer-start] auto [footer-end];
+    column-gap: 16px;
+    row-gap: 16px;
+}
+
+.grid-child {
+    /* background-color: aliceblue; */
+}
+
+.menu {
+    grid-column-start: first;
+    grid-column-end: end;
+    grid-row-start: menu-start;
+    grid-row-end: menu-end;
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+    gap: 16px;
+}
+
+.menu a {
+    text-decoration: underline;
+}
+
+.menu a:hover {
+    font-weight: 500;
+}
+
+a {
+    color:#111111;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a::before {
+    display: block;
+    content: attr(title);
+    font-weight: 500;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.header {
+    grid-column-start: first;
+    grid-column-end: end;
+    grid-row-start: header-start;
+    grid-row-end: header-end;
+    text-align: center;
+    font-family: "UnifrakturCook", cursive;
+    color: #111111;
+    font-size: 3.5rem;
+}
+
+.border {
+    grid-column-start: line2;
+    grid-column-end: line6;
+    grid-row-start: border-start;
+    grid-row-end: border-end;
+    padding: 2px 0;
+    margin: 0 0 16px 0;
+    border-bottom: 1px solid #111111;
+    border-top: 1px solid #111111;
+
+}
+
+.first-column {
+    grid-column-start: line2;
+    grid-column-end: line3;
+    grid-row-start: row1-end;
+    grid-row-end: row2-start;
+    margin-bottom: 16px;
+}
+
+.first-and-second-column {
+    grid-column-start: line2;
+    grid-column-end: line4;
+    grid-row-start: row4-start;
+    grid-row-end: row5-start;
+    padding: 16px 0;
+    border-bottom: 1px solid #111111;
+}
+
+.second-and-third-column {
+    grid-column-start: line3;
+    grid-column-end: line5;
+    grid-row-start: row1-end;
+    grid-row-end: row2-start;
+    border-right: 1px solid #dddddd;
+    margin-bottom: 16px;
+}
+
+.first-and-fourth-column {
+    grid-column-start: line2;
+    grid-column-end: line6;
+    grid-row-start: row2-start;
+    grid-row-end: row2-end;
+}
+
+.third-column {
+    grid-column-start: line4;
+    grid-column-end: line5;
+    grid-row-start: row1-end;
+    grid-row-end: row3-start;
+}
+
+.third-and-fourth-column {
+    grid-column-start: line4;
+    grid-column-end: line6;
+    grid-row-start: row4-start;
+    grid-row-end: row5-start;
+    padding: 4px 0 16px 0;
+    border-bottom: 1px solid #111111;
+}
+
+.fourth-column {
+    grid-column-start: line5;
+    grid-column-end: line6;
+    grid-row-start: row1-end;
+    grid-row-end: row2-start;
+    margin-bottom: 16px;
+}
+
+.title {
+    font-family: 'IBM Plex Serif', serif;
+    color: #111111;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 4px 0 4px 0;
+}
+
+.title-small {
+    font-family: 'IBM Plex Serif', serif;
+    color: #111111;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #444444;
+    font-size: 1rem;
+}
+
+.body > p {
+    margin: 0 0 8px 0;
+}
+
+.tag {
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-transform: uppercase; 
+    color: #111111;
+    font-size: .75rem;
+    font-weight: 500;
+    padding: 2px 0 2px 0;
+}
+
+.time {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: .75rem;
+    text-transform: uppercase; 
+    color: #444444;
+    padding: 2px 0 2px 0;
+}
+
+.live {
+    color: #A90B0B;
+}
+
+.live-tag {
+    display: flex;
+    gap: 4px;
+}
+
+ul {
+    margin: 0;
+    padding-left: 16px;
+}
+
+ul li::marker {
+    color: #A90B0B;
+}
+
+.the-premise {
+    padding-bottom: 16px;
+}
+
+.the-party {
+    border-top:  1px solid #111111;
+    padding-top: 16px;
+}
+
+.the-party > .body {
+    column-count: 3;
+}
+
+.the-party-questions {
+    grid-column-start: line2;
+    grid-column-end: line6;
+    grid-row-start: row3-start;
+    grid-row-end: row4-start;
+    display: flex;
+    gap: 16px;
+}
+
+.question {
+    border-left: 2px solid #dddddd;
+    padding-left: 8px;
+}
+
+.real-estate {
+    padding: 12px 0 16px 0;
+}
+
+.the-realm > * {
+    padding-top: 4px;
+}
+
+.weather {
+    padding: 0 0 16px 0;
+    border-bottom: 1px solid #111111;
+}
+
+span {
+    font-size: .75rem;
+    white-space: preserve nowrap;
+}
+
+bold {
+    font-weight: 500;
+}
+
+.the-premise-image {
+    background-image: url("/css/exploration.jpg");
+    background-repeat: no-repeat;
+    background-size: 700px auto;
+    background-position: center;
+    height: 100%;
+    margin-right: 12px;
+}
+
+.the-monster {
+    grid-column-start: line2;
+    grid-column-end: line3;
+    grid-row-start: row6-start;
+    grid-row-end: row7-start;
+    margin: 16px 0;
+    padding-top: 16px;
+}
+
+.second-and-third-column-lower {
+    grid-column-start: line3;
+    grid-column-end: line5;
+    grid-row-start: row6-start;
+    grid-row-end: row7-start;
+    border-right: 1px solid #dddddd;
+    margin: 16px 0;
+}
+
+.the-monster-image {
+    background-image: url("/css/Michalina_Janoszanka.jpg");
+    background-repeat: no-repeat;
+    background-size: 700px auto;
+    background-position: center;
+    height: 100%;
+    margin: 0 12px 0 0;
+}
+
+.fourth-column-lower {
+    grid-column-start: line5;
+    grid-column-end: line6;
+    grid-row-start: row6-start;
+    grid-row-end: row7-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.popular-article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 0 16px 0;
+}
+
+.popular-article:not(:last-child) {
+    border-bottom: 1px solid #dddddd;
+}
+
+.popular-text {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+
+.popular-text > .title-small {
+    font-size: .85rem;
+}
+
+.popular-image {
+    width: 100px;
+    height: 100px;
+    background-color:aliceblue;
+    background-repeat: no-repeat;
+    background-size: 200px auto;
+    background-position: center;
+}
+
+
+#popular-image-1 {
+    background-image: url("/css/church.jpg");
+}
+
+#popular-image-2 {
+    background-image: url("/css/frogs.jpg");
+}
+
+#popular-image-3 {
+    background-image: url("/css/balloon.jpg");
+}
+
+#popular-image-4 {
+    background-image: url("/css/lizard.jpg");
+}
+
+.first-and-fourth-column-lower {
+    grid-column-start: line2;
+    grid-column-end: line6;
+    grid-row-start: row7-start;
+    grid-row-end: row8-start;
+}
+
+.the-story-top {
+    padding-top: 16px;
+    border-top: 1px solid #111111;
+}
+
+.the-story-top > .body {
+    column-count: 2;
+}
+
+.the-story-bottom {
+    padding: 16px 0;
+    column-count: 3;
+}
+
+.tip {
+    grid-column-start: line2;
+    grid-column-end: line6;
+    grid-row-start: row8-start;
+    grid-row-end: row9-start;
+    font-family: 'IBM Plex Serif', serif;
+    text-align: center;
+    padding: 36px 0;
+    border-top: 1px solid #111111;
+    border-bottom: 1px solid #111111;
+}
+
+.tip > p {
+    margin: 0;
+}
+
+.heroism-and-belief {
+    grid-column-start: line2;
+    grid-column-end: line4;
+    grid-row-start: row9-start;
+    grid-row-end: row10-start;
+    padding: 16px 0;
+    column-count: 2;
+}
+
+.ending-the-game {
+    grid-column-start: line4;
+    grid-column-end: line6;
+    grid-row-start: row9-start;
+    grid-row-end: row10-start;
+    padding: 16px 0;
+    column-count: 2;
+}
+
+.footer {
+    grid-column-start: first;
+    grid-column-end: end;
+    grid-row-start: footer-start;
+    grid-row-end: footer-end;
+    text-align: center;
+    background-color: #efefef;
+    margin-top: 36px;
+    padding: 8px 0;
+    font-size: .75rem;
+}
+
+.footer > p {
+    margin: 0;
+}
