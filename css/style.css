@@ -542,7 +542,7 @@ bold {
     }
 
     .the-premise-image {
-        height: 200px;
+        height: 300px;
         margin: 0;
     }
 
@@ -552,7 +552,7 @@ bold {
     }
 
     .the-monster-image {
-        height: 200px;
+        height: 300px;
         margin: 0;
     }
 
@@ -576,8 +576,18 @@ bold {
         column-count: 1;
     }
 
-    .the-party-questions > .question> .title-small {
-        font-size: .85rem;
+    .the-party-questions {
+        flex-direction: column;
     }
+
+    .question {
+        border-left: none;
+        border-bottom: 1px solid #dddddd;
+        padding: 0 0 16px 0;
+    }
+
+    a::before {
+    display: none;
+}
 
 }
