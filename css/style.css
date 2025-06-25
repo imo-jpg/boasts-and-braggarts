@@ -245,7 +245,7 @@ bold {
 }
 
 .the-premise-image {
-    background-image: url("/css/exploration.jpg");
+    background-image: url("boasts-and-braggartsboasts-and-braggarts/css/exploration.jpg");
     background-repeat: no-repeat;
     background-size: 700px auto;
     background-position: center;
@@ -272,7 +272,7 @@ bold {
 }
 
 .the-monster-image {
-    background-image: url("/css/Michalina_Janoszanka.jpg");
+    background-image: url("boasts-and-braggarts/css/Michalina_Janoszanka.jpg");
     background-repeat: no-repeat;
     background-size: 700px auto;
     background-position: center;
@@ -323,19 +323,19 @@ bold {
 
 
 #popular-image-1 {
-    background-image: url("/css/church.jpg");
+    background-image: url("boasts-and-braggarts/css/church.jpg");
 }
 
 #popular-image-2 {
-    background-image: url("/css/frogs.jpg");
+    background-image: url("boasts-and-braggarts/css/frogs.jpg");
 }
 
 #popular-image-3 {
-    background-image: url("/css/balloon.jpg");
+    background-image: url("boasts-and-braggarts/css/balloon.jpg");
 }
 
 #popular-image-4 {
-    background-image: url("/css/lizard.jpg");
+    background-image: url("boasts-and-braggarts/css/lizard.jpg");
 }
 
 .first-and-fourth-column-lower {
