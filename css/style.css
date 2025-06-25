@@ -245,6 +245,7 @@ bold {
 }
 
 .the-premise-image {
+    background-color:aliceblue;
     background-image: url("/boasts-and-braggarts/css/exploration.jpg");
     background-repeat: no-repeat;
     background-size: 700px auto;
@@ -272,6 +273,7 @@ bold {
 }
 
 .the-monster-image {
+    background-color:aliceblue;
     background-image: url("/boasts-and-braggarts/css/Michalina_Janoszanka.jpg");
     background-repeat: no-repeat;
     background-size: 700px auto;
@@ -407,4 +409,173 @@ bold {
 
 .footer > p {
     margin: 0;
+}
+
+@media only screen and (max-width:800px) {
+    .container {
+        grid-template-columns: [first] auto [line2] 150px [line3] 150px [line4] 150px [line5] 150px [line6] auto [end];
+        grid-template-rows: [menu-start] auto [menu-end header-start] auto [header-end border-start] auto [border-end row1-start] auto [row1-end] auto [tabletrow1] auto [tabletrow2] auto [row2-start] auto [row2-end] auto [row3-start] auto [row4-start] auto [row5-start] auto [row6-start] auto [row7-start] auto [row8-start] auto [row9-start] auto [row10-start] auto [footer-start] auto [footer-end];
+    }
+
+    .first-column {
+        grid-column-end: line6;
+        grid-row-end: tabletrow1;
+    }
+
+    .second-and-third-column {
+        display: none;
+    }
+
+    .fourth-column {
+        grid-column-start: line2;
+        grid-column-end: line6;
+        grid-row-start: tabletrow1;
+        grid-row-end: tabletrow2;
+        margin-bottom: 0;
+        padding-top: 16px;
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid #111111;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .popular-article {
+        padding-bottom: 4px;
+        margin-top: 4px;
+    }
+
+    .popular-text {
+        width: 100%;
+    }
+
+    .the-monster {
+        grid-column-end: line5;
+        margin: 0;
+        padding: 0 12px 0 0;
+        border-right: 1px solid #dddddd;
+    }
+
+    .second-and-third-column-lower {
+        display: none;
+    }
+
+    .fourth-column-lower {
+        margin-top: 0;
+    }
+
+    .heroism-and-belief {
+        grid-column-end: line6;
+        grid-row-start: row9-start;
+        grid-row-end: row10-start;
+    }
+
+    .ending-the-game {
+        border-top: solid 1px #111111;
+        grid-column-start: line2;
+        grid-column-end: line6;
+        grid-row-start: row10-start;
+        grid-row-end: footer-start;
+    }
+
+}
+
+@media only screen and (max-width:600px) {
+    .container {
+        grid-template-columns: [first] auto [line2] auto [line3] auto [line4] auto [line5] auto [line6] auto [end];
+        grid-template-rows: [menu-start] auto [menu-end header-start] auto [header-end border-start] auto [border-end row1-start] auto [row1-end] auto [tabletrow1] auto [phonerow1] auto [phonerow2] auto [tabletrow2] auto [row2-start] auto [row2-end] auto [row3-start] auto [row4-start] auto [row5-start] auto [row6-start] auto [phonerow3] auto [phonerow4] auto [phonerow5] auto [row7-start] auto [row8-start] auto [row9-start] auto [row10-start] auto [footer-start] auto [footer-end];
+    }
+
+    .image {
+        display: block;
+    }
+
+    .heroism-and-belief {
+        column-count: 1;
+    }
+
+    .ending-the-game {
+        column-count: 1;
+    }
+
+    .grid-child {
+        grid-column-start: line2;
+        grid-column-end: line6;
+    }
+
+    .third-and-fourth-column {
+        grid-row-start: row5-start;
+        grid-row-end: row6-start;
+    }
+
+     .second-and-third-column {
+        display: block;
+        grid-row-start: phonerow1;
+        grid-row-end: phonerow2;
+        border: none;
+    }
+
+    .second-and-third-column-lower {
+        display: block;
+        grid-row-start: phonerow3;
+        grid-row-end: phonerow4;
+        border-right: none;
+        border-bottom: 1px solid #111111;
+        padding-bottom: 16px;
+    }
+
+    .the-monster {
+        display: block;
+        grid-row-start: row6-start;
+        grid-row-end: phonerow3;
+        border: none;
+    }
+
+    .fourth-column-lower {
+        grid-row-start: phonerow4;
+    }
+
+    .popular-text {
+        width: 55%;
+    }
+
+    .the-premise-image {
+        margin: 0;
+    }
+
+    .fourth-column {
+        grid-row-start: phonerow2;
+        grid-row-end: tabletrow2;
+    }
+
+    .the-monster-image {
+        margin: 0;
+    }
+
+    .popular-text > .title-small {
+        font-size: 1rem;
+    }
+
+    .the-story-top > .body {
+        column-count: 1;
+    }
+
+    .the-story-bottom {
+        column-count: 1;
+    }
+
+    .popular-article:last-child {
+        padding-bottom: 0;
+    }
+
+    .the-party > .body {
+        column-count: 1;
+    }
+
+    .the-party-questions > .question> .title-small {
+        font-size: .85rem;
+    }
+
 }
